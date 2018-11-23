@@ -1,0 +1,25 @@
+{% block pageheader%}
+	Students Data
+{% endblock %}
+{% block content %}
+<div class="table-responsive">
+	<table class="table" id="datatable">
+		<thead>
+			<tr>
+				<th>NAME</th><th>AGE</th><th>GENDER</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for obj in objects%}
+			<tr>
+				<td>{{obj.username}}</td>
+				<td>{{obj.age}}</td>
+				<td>{{obj.gender}}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+		
+	</table>
+</div>
+	
+{% endblock %}
